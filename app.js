@@ -45,5 +45,8 @@ function playWithPet() {
   } else {
     alert("Invalid action, please choose 'feed', 'play', or 'age'.");
   }
+  for (let i = 0; i < 5; i++) { 
+    playWithPet();
+}
 }
 playWithPet();
