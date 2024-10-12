@@ -4,7 +4,7 @@ var pet = {
   age: 1,
   happiness: 80,
   hunger: 50,
-  fed: function () {
+  feed: function () {
     this.hunger = this.hunger - 20;
     if (this.hunger < 0) {
       this.hunger = 0;
@@ -32,6 +32,18 @@ var pet = {
 };
 
 function playWithPet() {
-  pet.fed();
+  let action = prompt(
+    "What would you like to do with your pet? (feed, play, age)"
+  );
+
+  if (action === "feed") {
+    pet.feed();
+  } else if (action === "play") {
+    pet.play();
+  } else if (action === "age") {
+    pet.agePet();
+  } else {
+    alert("Invalid action, please choose 'feed', 'play', or 'age'.");
+  }
 }
 playWithPet();
