@@ -6,7 +6,7 @@ var pet={
     hunger: 50,
     fed:function(){
         this.hunger=this.hunger-20;
-        alert(pet.name)
+        
     }
 }
 
